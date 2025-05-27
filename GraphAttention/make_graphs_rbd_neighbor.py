@@ -79,10 +79,10 @@ def make_graph(name, esm, bind, x_ind, edge_index): #need esm embeddings, y (bin
 		coord2 = find_atom_coords(cur_pose, cur_edge_pos_ind[1])
 		dist = get_distance(coord1, coord2)
 		seq_dist = abs(cur_edge_pos_ind[0] - cur_edge_pos_ind[1])
-		# sel1 = index_selector(cur_edge_pos_ind[0])
-		# sel2 = index_selector(cur_edge_pos_ind[1])
-		# inte = interaction_energy(cur_pose, sfxn, sel1, sel2)	
-		#edge_attr.append([seq_dist, inte, dist])
+		sel1 = index_selector(cur_edge_pos_ind[0])
+		sel2 = index_selector(cur_edge_pos_ind[1])
+		inte = interaction_energy(cur_pose, sfxn, sel1, sel2)	
+		edge_attr.append([seq_dist, inte, dist])
 		edge_attr.append([seq_dist, dist])
 	design_seq = cur_pose.sequence()
 	x = []
@@ -94,12 +94,12 @@ def make_graph(name, esm, bind, x_ind, edge_index): #need esm embeddings, y (bin
 			temp.append(0)
 		else:
 			temp.append(1)
-		# cur_aa = design_seq[cur_pos_ind - 1] #0-index
-		# for b in aa_list:
-		# 	if b == cur_aa:
-		# 		temp.append(1)
-		# 	else:
-		# 		temp.append(0)
+		cur_aa = design_seq[cur_pos_ind - 1] #0-index
+		for b in aa_list:
+		 	if b == cur_aa:
+		 		temp.append(1)
+		 	else:
+		 		temp.append(0)
 		temp.append(cur_esm[cur_pos_ind - 1])
 		x.append(temp)
 	x=torch.tensor(x, dtype=torch.float)
