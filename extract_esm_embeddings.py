@@ -58,7 +58,7 @@ def extract_embeddings(model_name, fasta_file, output_dir, tokens_per_batch=4096
                 torch.save(result, filename)
 model_name = 'esm2_t36_3B_UR50D'
 #model_name = 'esm1v_t33_650M_UR90S_5'
-fasta_file = pathlib.Path('round_2_seqs_leftover.fa')
+fasta_file = pathlib.Path('round_2_seqs.fa')
 output_dir = pathlib.Path('embed/r2')
 
 extract_embeddings(model_name, fasta_file, output_dir)
