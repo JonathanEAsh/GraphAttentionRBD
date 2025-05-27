@@ -164,9 +164,9 @@ class GCN(torch.nn.Module):
     def __init__(self, hidden_channels):
         super(GCN, self).__init__()
         torch.manual_seed(12345)
-        self.conv1 = GATv2Conv(2, 20, edge_dim=2, heads=2)
-        self.conv2 = GATv2Conv(40, 40, edge_dim=2, heads=2)
-        self.conv3 = GATv2Conv(80, 80, edge_dim=2, heads=2)
+        self.conv1 = GATv2Conv(22, 20, edge_dim=3, heads=2)
+        self.conv2 = GATv2Conv(40, 40, edge_dim=3, heads=2)
+        self.conv3 = GATv2Conv(80, 80, edge_dim=3, heads=2)
         # self.conv4 = GATv2Conv(160, 160, edge_dim=3, heads=2)
         # self.conv5 = GATv2Conv(320, 320, edge_dim=3, heads=2)
         # self.conv6 = GATv2Conv(640, 640, edge_dim=3, heads=2)
