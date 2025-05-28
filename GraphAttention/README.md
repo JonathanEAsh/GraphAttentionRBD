@@ -29,6 +29,8 @@ binary/compile_results + compile_results_combo.py - compile performance metrics 
 
 binary/test_gat_split + combo.py - perform model inference on relevant dataset, recording prediction confidence for each individual sample.
 
+=============
+
 To replicate the paper's GAT model split training regiment for the full feature set:
 
 1 - "mkdir -p raw_graphs_binary/r1 raw_graphs_binary/r2"
