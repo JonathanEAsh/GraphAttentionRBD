@@ -222,8 +222,8 @@ for a, b in zip(seqs_good, nodes_good):
 	neighbor_list, neighbor_count = count_neighbors(a, seqs_505)
 	#print(neighbor_list)
 	counts_good.append(neighbor_count)
-print('GOOD: AVG: '+str(round(statistics.mean(counts_good),3))+' STDEV: '+str(round(statistics.stdev(counts_good),3)))
-print('BAD: AVG: '+str(round(statistics.mean(counts_bad),3))+' STDEV: '+str(round(statistics.stdev(counts_bad),3)))
+#print('GOOD: AVG: '+str(round(statistics.mean(counts_good),3))+' STDEV: '+str(round(statistics.stdev(counts_good),3)))
+#print('BAD: AVG: '+str(round(statistics.mean(counts_bad),3))+' STDEV: '+str(round(statistics.stdev(counts_bad),3)))
 
 
 #print(edgenames)
@@ -274,9 +274,9 @@ for i in range(5):
 
 #plt.savefig('505_circle_like_only_thick_connected.png')
 plt.show()
-print(len(nodes_good))
-print(len(nodes_bad))
-print(len(nodes_good)/(len(nodes_good)+len(nodes_bad)))
+#print(len(nodes_good))
+#print(len(nodes_bad))
+#print(len(nodes_good)/(len(nodes_good)+len(nodes_bad)))
 # LIB 505
 # LIKE + WORSE
 # PERCENTAGE OF EDGES - 31.44%
