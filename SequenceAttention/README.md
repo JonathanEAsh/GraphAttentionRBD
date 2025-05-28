@@ -18,6 +18,7 @@ test_hyper.py - perform sequence attention hyperparameter optimization
 
 test_rbd_attention_combo / split.py - perform model inference with trained seq attention model for combo and split protocols, respectively. Outputs individual sample labels and confidence.
 
+===========
 
 To replicate the paper's Sequence Attention model split training regiment:
 
