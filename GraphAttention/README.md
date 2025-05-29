@@ -37,6 +37,8 @@ To replicate the paper's GAT model split training regiment for the full feature 
 
 2 - Ensure Rosetta decoys are downloaded. Default paths are ../decoys_r1/ and ../decoys_r2/. Native structure Wuhan.pdb also required. Default path ../../struct_relaxed/wuhan.pdb
 
+- esm_stats_bind.csv, decoys_r1/, and decoys_r2/ are required for graph generation. The relevant files can be found in our Zenodo repository: https://zenodo.org/records/15548841?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImFlOTQwNjkwLTcwNTctNDQwMS1hYjBjLTI1MjMwMzBlODEyOSIsImRhdGEiOnt9LCJyYW5kb20iOiI0M2NjMzNmZjdjNzUxYTVmMGZhMGE2YjQ0YWUwNDI2MCJ9.0uT8f_yjJ-w9nXE6oh5hFM-IjnF2zGoXZsG0lpqur1ocCBmWND2owyXILlff2YmLbQosUOooCMbpvrZZawXz6Q
+
 3 - "python monitor_graphs.py"
 
 4 - "mkdir -p train_r1_test_r2/train/raw train_r1_test_r2/train/processed train_r1_test_r2/val/raw train_r1_test_r2/val/processed train_r1_test_r2/test/raw train_r1_test_r2/test/processed"
